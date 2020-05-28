@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "version": "0.0.1",
   "name": "react-use-sockjs",
   "description": "React hooks for SockJS-client with STOMP messaging protocol.",
   "scripts": {
