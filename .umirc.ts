@@ -4,6 +4,11 @@ export default defineConfig({
   mode: "site",
   title: 'react-use-sockjs',
   logo: './logo.png',
+  hash: true,
+  history: {
+    type: 'hash'
+  },
+  publicPath: './',
   navs: [
     null, // null 值代表保留约定式生成的导航，只做增量配置
     {
