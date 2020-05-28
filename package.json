@@ -1,0 +1,53 @@
+{
+  "private": true,
+  "name": "react-use-sockjs",
+  "description": "React hooks for SockJS-client with STOMP messaging protocol.",
+  "scripts": {
+    "start": "dumi dev",
+    "docs:build": "dumi build",
+    "build": "father-build && npm run compile",
+    "compile": "tsc --declarationDir lib && tsc --declarationDir es",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "typings": "./lib/index.d.ts",
+  "repository": "https://github.com/qizhancheng/react-use-sockjs",
+  "homepage": "https://github.com/qizhancheng/react-use-sockjs",
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "files": [
+    "lib",
+    "es",
+    "README.md",
+    "package.json"
+  ],
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@types/stompjs": "^2.3.4",
+    "@umijs/hooks": "^1.9.2",
+    "react": "^16.12.0",
+    "lodash": "^4.17.15",
+    "sockjs-client": "^1.4.0",
+    "stompjs": "^2.3.3"
+  },
+  "devDependencies": {
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.0.5",
+    "dumi": "^1.0.7",
+    "father-build": "^1.18.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "yorkie": "^2.0.0"
+  }
+}
