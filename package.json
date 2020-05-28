@@ -15,7 +15,7 @@
   "module": "./es/index.js",
   "typings": "./lib/index.d.ts",
   "repository": "https://github.com/qizhancheng/react-use-sockjs",
-  "homepage": "https://github.com/qizhancheng/react-use-sockjs",
+  "homepage": "https://qizhancheng.github.io/react-use-sockjs",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },

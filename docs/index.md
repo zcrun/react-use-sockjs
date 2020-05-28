@@ -10,7 +10,7 @@ npm install --save react-use-sockjs
 
 ## 例子
 
-```tsx
+```ts
 import React, { useState } from 'react';
 import useSockjs from 'react-use-sockjs';
 
