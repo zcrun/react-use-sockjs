@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "react-use-sockjs",
   "description": "React hooks for SockJS-client with STOMP messaging protocol.",
   "scripts": {
@@ -35,7 +35,6 @@
   },
   "dependencies": {
     "@types/stompjs": "^2.3.4",
-    "@umijs/hooks": "^1.9.2",
     "react": "^16.12.0",
     "lodash": "^4.17.15",
     "sockjs-client": "^1.4.0",
