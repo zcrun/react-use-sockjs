@@ -127,6 +127,11 @@ const useSockjs = (props: SockjsProps): UseSockjs => {
   const retryCount = useRef(0);
   const timeoutId = useRef<any>(null);
   const client = useRef<any>(null); // Websocket实例
+  const savedOnMessage = useRef<Function>(onMessage);
+
+  useEffect(() => {
+    savedOnMessage.current = onMessage;
+  });
 
   const _initStompClient = useCallback(() => {
     // stompjs的Websocket只能打开一次
@@ -164,7 +169,7 @@ const useSockjs = (props: SockjsProps): UseSockjs => {
         topic,
         (msg: any) => {
           let body = _processMessage(msg.body);
-          onMessage(body, msg.headers.destination);
+          savedOnMessage.current(body, msg.headers.destination);
           if (body && body.status === 'END') {
             disconnect();
           }
